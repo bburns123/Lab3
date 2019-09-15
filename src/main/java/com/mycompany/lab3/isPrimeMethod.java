@@ -25,11 +25,11 @@ public class isPrimeMethod {
         else if (input > 1) {
             for (int counter = 1; counter < 10; counter++) {
                 if (input % counter == 0) {
-                    output = true;
+                    output = false;
                     break;
                 }
                 else {
-                    output = false;
+                    output = true;
                 }
             }
         }
@@ -37,7 +37,7 @@ public class isPrimeMethod {
             System.out.println(input + "is not a prime number!");
         }
         else {
-            System.out.println(input + "is not a prime number!");
+            System.out.println(input + " is a prime number!");
         }
     }
 }

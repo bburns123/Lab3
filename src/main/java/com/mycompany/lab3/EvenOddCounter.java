@@ -25,8 +25,8 @@ public class EvenOddCounter {
         ArrayList<Integer> evenArray = new ArrayList<Integer>();
         ArrayList<Integer> oddArray = new ArrayList<Integer>();
         
-        for (int counter = 1; counter >= 100; counter++) {
-            int randomNumber = r.nextInt();
+        for (int counter = 1; counter <= 100; counter++) {
+            int randomNumber = r.nextInt(1000);
             if (isEven(randomNumber)) {
                 evenArray.add(randomNumber);
             }
@@ -35,8 +35,8 @@ public class EvenOddCounter {
             }
         }
         
-        System.out.println("The random even numbers are: \n" + evenArray);
-        System.out.println("The random odd numbers are: \n" + oddArray);
+        System.out.println("The random even numbers are: \n" + evenArray.toString());
+        System.out.println("The random odd numbers are: \n" + oddArray.toString());
         
     }
     

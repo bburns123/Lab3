@@ -12,32 +12,35 @@ import java.util.Scanner;
  * @author Brendyn Burns (0800633)
  */
 public class isPrimeMethod {
+    static boolean primeMethod (int input) {
+        
+        if (input <= 1) {
+            return false;
+        }
+        else if (input > 1) {
+            for (int counter = 2; counter < input; counter++) {
+                if (input % counter == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+        
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number to find out if it's prime: ");
         int input = scanner.nextInt();
-        boolean output = false;
         
-        
-        if (input == 1) {
-            output = true;
-        }
-        else if (input > 1) {
-            for (int counter = 1; counter < 10; counter++) {
-                if (input % counter == 0) {
-                    output = false;
-                    break;
-                }
-                else {
-                    output = true;
-                }
-            }
-        }
-        if (output = true) {
-            System.out.println(input + "is not a prime number!");
+        if (primeMethod(input)) {
+            System.out.println(input + " is a prime number! woah!");
+            
         }
         else {
-            System.out.println(input + " is a prime number!");
+            System.out.println(input + " is not a prime number! :*(");
         }
+            
     }
+    
 }
